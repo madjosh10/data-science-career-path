@@ -74,9 +74,62 @@ Finally, we need to add each cleaned up record to `medical_records_clean`.
 Outside of the nested `for` loop, append `record_clean` to `medical_records_clean`.
 
 ### Task 13
+Print `medical_records_clean` outside of the `for` loops to see the output.
+
+You should see output that is formatted and much easier to read.
+
+## Analyzing Data 
+### Task 14
 Our data is now clean and ready for analysis.
 For example, to print out the names of each of the ten individuals, we can use the following loop:
 ```
 for record in medical_records_clean:
     print(record[0])
+```
+
+
+### Task 15
+You want all of the names in the medical records to be in uppercase characters.
+
+In the `for` loop, update `records[0]` before the `print` statement so that all of the characters are uppercase.
+
+### Task 16
+Let’s store each name, age, BMI, and insurance cost in separate lists.
+
+To start, create four empty lists:
+
+- `names`
+- `ages`
+- `bmis`
+- `insurance_costs`
+
+### Task 17
+Next, iterate through `medical_records_clean` and for each record:
+
+- Append the name to `names`.
+- Append the age to `ages`.
+- Append the BMI to `bmis`.
+- Append the insurance cost to `insurance_costs`.
+
+### Task 18
+Print `names`, `ages`, `bmis`, and `insurance_costs` outside of the loop.
+
+Make sure the output is what you expect.
+
+### Task 19
+Now that all of our data is in separate lists, we can easily perform analysis on that data. Let’s calculate the average BMI in our dataset.
+
+First, create a variable called `total_bmi` and set it equal to 0.
+
+### Task 20
+Next, use a `for` loop to iterate through `bmis` and add each `bmi` to `total_bmi`.
+
+Remember to convert `bmi` to a float.
+
+### Task 21
+After the loop, create a variable called `average_bmi` that stores the `total_bmi` divided by the length of the `bmis` list.
+
+Print out `average_bmi` with the following message:
+```
+Average BMI: {average_bmi}
 ```

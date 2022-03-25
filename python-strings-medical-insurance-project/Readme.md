@@ -36,3 +36,47 @@ There are {num_records} medical records in the data.
 ## Splitting Strings
 
 ### Task 6
+The medical data in its current form is difficult to analyze. An essential job for a data scientist is to clean up data so that it’s easy to work with.
+
+Let’s start off by splitting the `updated_medical_data` string into a list of each medical record. Remember that each medical record is separated by a `;` in the string.
+
+Store the result in a variable called `medical_data_split` and print this variable.
+
+### Task 7
+Our data is now stored in a list, but it is still hard to read. Let's split each medical record into its own list. 
+First, define an empty list called `medical_records`
+
+### Task 8
+Next, iterate through `medical_data_split` and for each record, split the string after each comma (`,`) and append the split string to `medical_records`.
+
+Print `medical_records` after the loop.
+
+## Cleaning Data
+### Task 9
+Our data is now slightly more readable. Hoever, it is not properly formatted - it contains unnecassary whitespace.
+To fix this, let's start by creating an empty list called `medical_records_clean`.
+
+### Task 10
+Next, use a `for` loop to iterate through `medical_records`.
+
+Inside of the loop, create an empty list called `record_clean`. We’ll use this list to store a formatted version of each medical record.
+
+### Task 11
+After the `record_clean` variable, create a nested `for` loop that goes through each `record`:
+```
+for item in record:
+```
+Inside of this loop, append `item.strip()` to `record_clean` to remove any whitespace from the string.
+
+### Task 12
+Finally, we need to add each cleaned up record to `medical_records_clean`.
+
+Outside of the nested `for` loop, append `record_clean` to `medical_records_clean`.
+
+### Task 13
+Our data is now clean and ready for analysis.
+For example, to print out the names of each of the ten individuals, we can use the following loop:
+```
+for record in medical_records_clean:
+    print(record[0])
+```
